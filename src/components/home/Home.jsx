@@ -1,7 +1,12 @@
 import React from "react";
+import { Hero } from "./Hero";
+import { About } from "../pages/About";
 
-const Home = () => {
-  return <>home</>;
+export const Home = () => {
+  return (
+    <>
+      <Hero />
+      <About />
+    </>
+  );
 };
-
-export default Home;
