@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-/* * {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-} */
+}
 :root {
   --primaryBackground: #212222;
   --secondaryBackground: #2f3030;
@@ -358,7 +358,7 @@ label {
 }
 
 .contact {
-  margin: 20px 0;
+  margin-top: 40px;
 }
 
 .contact .right,
@@ -366,21 +366,8 @@ label {
   padding: 20px;
 }
 
-/* .contact .right {
-  width: 35%;
-  margin-left: 20px;
-}
-
-.contact .left {
-  width: 65%;
-} */
-
 .contact .flex input:nth-child(1) {
   margin-right: 10px;
-}
-
-.contact .fix {
-  padding: auto;
 }
 
 .contact button,
@@ -392,4 +379,48 @@ label {
   outline: none;
   margin: 10px 0;
   border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: var(--primaryBackground);
+  padding: 70px;
+  margin-top: 50px;
+}
+footer i {
+  margin: 5px;
+  color: var(--primaryColor);
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+  .heroContainer {
+    max-width: 80%;
+  }
+  .hero::after {
+    height: 60vh;
+  }
+
+  section {
+    height: auto;
+    padding-top: 50px;
+  }
+
+  .contact .flexsb,
+  .about .flex {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .grid3,
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

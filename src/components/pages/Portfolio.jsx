@@ -25,6 +25,7 @@ export const Portfolio = () => {
               <button
                 className="primaryBtn"
                 onClick={() => filterItems(category)}
+                data-aos="zoom-out-down"
               >
                 {category}
               </button>
@@ -33,7 +34,7 @@ export const Portfolio = () => {
 
           <div className="content grid3">
             {list.map((items) => (
-              <div className="box">
+              <div className="box" data-aos="fade-up">
                 <div className="image">
                   <img src={items.cover} alt="" />
                 </div>

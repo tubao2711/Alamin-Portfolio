@@ -8,10 +8,10 @@ export const About = () => {
         <div className="container flex">
           {about.map((val) => (
             <>
-              <div className="left">
+              <div className="left" data-aos="fade-down-right">
                 <img src={val.cover} alt="" />
               </div>
-              <div className="right">
+              <div className="right" data-aos="fade-down-left">
                 <Heading title="About Me" />
                 <p>{val.desc}</p>
                 <p>{val.desc1}</p>

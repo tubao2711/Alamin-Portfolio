@@ -11,20 +11,33 @@ export const Contact = () => {
           <div className=" flexsb">
             <div className="right ">
               <form>
-                <div className="flex">
-                  <input type="text" placeholder="Name" />
-                  <input type="email" placeholder="Email" />
+                <div className="flex info">
+                  <input type="text" placeholder="Name" data-aos="flip-left" />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    data-aos="flip-right"
+                  />
                 </div>
-                <div className="fix">
-                  <input type="text" placeholder="Subject" />
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <button>Submit</button>
+                <input
+                  type="text"
+                  className="subject"
+                  placeholder="Subject"
+                  data-aos="flip-up"
+                />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  data-aos="flip-down"
+                ></textarea>
+                <button data-aos="zoom-in-up">Submit</button>
               </form>
             </div>
             <div className="left">
               {contact.map((item) => (
-                <div className="box">
+                <div className="box" data-aos="zoom-in">
                   <i>{item.icon}</i>
                   <p>{item.text1}</p>
                   <p>{item.text2}</p>

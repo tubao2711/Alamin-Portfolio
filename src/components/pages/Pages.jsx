@@ -8,6 +8,7 @@ import { Testimonial } from "./Testimonial";
 import { Blog } from "./Blog";
 import { Contact } from "./Contact";
 import { Portfolio } from "./Portfolio";
+import { Footer } from "../common/Footer";
 
 const Pages = () => {
   return (
@@ -23,6 +24,7 @@ const Pages = () => {
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contact" component={Contact} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );

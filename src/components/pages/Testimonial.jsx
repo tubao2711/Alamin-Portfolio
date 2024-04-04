@@ -19,16 +19,16 @@ export const Testimonial = () => {
         <div className="container">
           <Slider {...settings}>
             {testimonials.map((val) => (
-              <div className="box">
+              <div className="box" data-aos="zoom-out-up">
                 <i>
                   <FormatQuote />
                 </i>
                 <p>{val.text}</p>
-                <div className="image">
+                <div className="image" data-aos="zoom-out-right">
                   <img src={val.image} alt="" />
                 </div>
-                <h3>{val.name}</h3>
-                <label>{val.post}</label>
+                <h3 data-aos="zoom-out-left">{val.name}</h3>
+                <label data-aos="zoom-out">{val.post}</label>
               </div>
             ))}
           </Slider>
