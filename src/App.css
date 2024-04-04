@@ -189,4 +189,207 @@ section {
 .right {
   width: 65%;
 }
+
 /* About */
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.services .content i {
+  color: var(--primaryColor);
+}
+
+.services .content .box {
+  padding: 35px;
+  background-color: var(--primaryBackground);
+}
+
+/* Services */
+
+/*---------counter-------------*/
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+  height: 50vh;
+  place-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.counter {
+  width: 100%;
+}
+.hero.counter::after {
+  background-image: url("../public/images/some-facts-bg.png");
+  height: 50vh;
+}
+.counter h1 {
+  margin: 0;
+}
+
+/* Portfolio */
+
+article {
+  margin-bottom: 80px;
+}
+
+article img {
+  width: 100%;
+  height: 100%;
+}
+
+article .box {
+  position: relative;
+  transition: 0.5s;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+article .box:hover .overlay::after,
+article .box:hover .overlay {
+  opacity: 1;
+}
+
+.catButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.catButton .primaryBtn {
+  padding: 20px 50px;
+  margin-right: 15px;
+  text-transform: capitalize;
+}
+
+.catButton .primaryBtn:hover {
+  background-color: var(--primaryColor);
+  color: #000;
+}
+
+/* Testomials */
+.testimonials {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-image: url("../public/images/testimonials-bg.png");
+}
+
+.testimonials .box {
+  max-width: 60%;
+  margin: auto;
+}
+
+.testimonials i {
+  background-color: white;
+  font-size: 20px;
+  color: var(--primaryColor);
+  padding: 15px;
+  margin: 30px 0;
+  display: inline-block;
+}
+
+.testimonials .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid var(--primaryColor);
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+label {
+  color: var(--primaryColor);
+  margin: 10px 0;
+  display: inline-block;
+}
+
+.blog img {
+  width: 100%;
+}
+
+.blog .box {
+  background-color: var(--primaryBackground);
+  border-radius: 10px;
+}
+
+.blog .text {
+  padding: 10px 30px;
+}
+
+.contact {
+  margin: 20px 0;
+}
+
+.contact .right,
+.contact .left {
+  padding: 20px;
+}
+
+/* .contact .right {
+  width: 35%;
+  margin-left: 20px;
+}
+
+.contact .left {
+  width: 65%;
+} */
+
+.contact .flex input:nth-child(1) {
+  margin-right: 10px;
+}
+
+.contact .fix {
+  padding: auto;
+}
+
+.contact button,
+.contact textarea,
+.contact input {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
