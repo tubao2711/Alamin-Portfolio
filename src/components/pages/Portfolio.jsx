@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { portfolio } from "../data/yummyData";
-import { Visibility } from "@mui/icons-material";
-import { Heading } from "../common/Heading";
+import React, { useState } from 'react';
+import { portfolio } from '../data/yummyData';
+import { Visibility } from '@mui/icons-material';
+import { Heading } from '../common/Heading';
 
-const allCategory = ["all", ...new Set(portfolio.map((item) => item.category))];
+const allCategory = ['all', ...new Set(portfolio.map((item) => item.category))];
 export const Portfolio = () => {
   const [list, setList] = useState(portfolio);
-  const [category, setCategory] = useState(allCategory);
+  // const [category, setCategory] = useState(allCategory);
 
   const filterItems = (category) => {
     const newItems = portfolio.filter((item) => item.category === category);
     setList(newItems);
-    if (category === "all") {
+    if (category === 'all') {
       setList(portfolio);
     }
   };
@@ -19,9 +19,9 @@ export const Portfolio = () => {
     <>
       <article>
         <div className="container">
-          <Heading title={"Portfoloio"} />
+          <Heading title={'Portfoloio'} />
           <div className="catButton">
-            {category.map((category) => (
+            {allCategory.map((category) => (
               <button
                 className="primaryBtn"
                 onClick={() => filterItems(category)}
